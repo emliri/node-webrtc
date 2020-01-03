@@ -15,8 +15,8 @@ namespace node_webrtc {
 #define DATA_CHANNEL_INIT_FN CreateDataChannelInit
 #define DATA_CHANNEL_INIT_LIST \
   DICT_DEFAULT(bool, ordered, "ordered", true) \
-  DICT_OPTIONAL(uint32_t, maxPacketLifeTime, "maxPacketLifeTime") \
-  DICT_OPTIONAL(uint32_t, maxRetransmits, "maxRetransmits") \
+  DICT_DEFAULT(uint32_t, maxPacketLifeTime, "maxPacketLifeTime", 0) \
+  DICT_DEFAULT(uint32_t, maxRetransmits, "maxRetransmits", 0) \
   DICT_DEFAULT(std::string, protocol, "protocol", "") \
   DICT_DEFAULT(bool, negotiated, "negotiated", false) \
   DICT_OPTIONAL(uint32_t, id, "id") \
